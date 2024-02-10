@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Map</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJRYQ2Kvt3W3mLholrkmo_D8IhfAjc3dk"></script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <style>
+        /* Add additional CSS for the legend and other UI components here */
+.legend { background: white; padding: 10px; margin: 10px; border: 1px solid #000; }
+.legend-color { width: 15px; height: 15px; display: inline-block; margin-right: 5px; }
+#loadingIndicator { /* Your loading indicator styles */ }
+#search-form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.custom-logout-btn {
+        background-color: red; /* Red background */
+        color: white; /* White text */
+        font-size: larger; /* Larger font size */
+        padding: 10px 20px; /* Larger padding for bigger button */
+        border-radius: 5px; /* Rounded corners */
+}
+
+.custom-logout-btn:hover {
+        background-color: darkred; /* Darker red on hover */
+}
+#city-search {
+    width: 300px;
+    padding: 8px 15px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#search-form button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#search-form button:hover {
+    background-color: #0056b3;
+}
+#map {
+    height: 500px; 
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.legend {
+    background: white;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.legend-color {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+
+</style>
+    
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-right">
+                <a href="{{ url_for('weather.logout') }}" class="btn btn-primary">Logout</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="text-center my-4">Weather Map</h1>
+        <form id="search-form">
+            <input type="text" id="city-search" placeholder="Enter city name">
+            <button type="submit">Search</button>
+        </form>
+
+        <div id="map"></div>
+    </div>
+
+
+    <script src="static/weatherData.js"></script>
+    <script src="static/uiComponents.js"></script>
+    <script src="static/markerCluster.js"></script>
+    <script src="static/mapInit.js"></script>
+</body>
+</html>

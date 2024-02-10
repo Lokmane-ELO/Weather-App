@@ -1,0 +1,51 @@
+
+        /* Add additional CSS for the legend and other UI components here */
+.legend { background: white; padding: 10px; margin: 10px; border: 1px solid #000; }
+.legend-color { width: 15px; height: 15px; display: inline-block; margin-right: 5px; }
+#loadingIndicator { /* Your loading indicator styles */ }
+#search-form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#city-search {
+    width: 300px;
+    padding: 8px 15px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#search-form button {
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#search-form button:hover {
+    background-color: #0056b3;
+}
+#map {
+    height: 500px; /* Augmentez la hauteur pour une meilleure visibilité */
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.legend {
+    background: white;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.legend-color {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 5px;
+}

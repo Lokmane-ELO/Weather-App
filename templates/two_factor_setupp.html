@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Two Factor Setup</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Two Factor Authentication Setup</h2>
+        <p>Scan the QR Code with your TOTP app.</p>
+        <div>
+            <img src="data:image/svg+xml;base64,{{ qr_code }}">
+        </div>
+        <form method="post" action="{{ url_for('auth.two_factor_verify') }}">
+            <div class="form-group">
+                <label for="token">Token</label>
+                <input type="text" class="form-control" name="token" id="token" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Verify</button>
+        </form>
+    </div>
+</body>
+</html>

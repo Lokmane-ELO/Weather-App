@@ -1,0 +1,17 @@
+## Weather APP
+
+This web application displays the weather conditions of a city along with an image of the city on Google Maps.
+
+For enhanced security, the application employs Two-Factor Authentication (2FA). To register, users must provide a username and password, followed by scanning a QR code with the Google Authenticator app to receive a token that grants access to the application.
+
+This application has been developed for educational purposes.
+
+# Installation
+To install the required dependencies, run the following command:
+
+pip install -r requirements.txt
+
+# Running the Application
+To start the application, execute:
+
+python app.py
